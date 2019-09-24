@@ -8,24 +8,25 @@
 <!-- [![license](https://img.shields.io/github/license/mirazmamun/stack-glass-problem.svg)](LICENSE)
 [![npm downloads](https://img.shields.io/npm/dt/stack-glass-problem.svg)](https://npm.im/stack-glass-problem) -->
 
-> Solving amount of water dispensed in glasses stacked in triangular pattern following the image [!here]
+> Solving amount of water dispensed in glasses stacked in triangular pattern following the image ![here](screenshot_stack.png). This will find out the amount of liquid in any glass depending on amount poured on topmost one.
 
 
 ## Table of Contents
 
-* [Usage](#Dev Setup and Usage)
+* [Usage](#usage)
 * [Test](#Test)
 * [Contributors](#contributors)
 * [License](#license)
 
 
-## Dev Setup and Usage
+## Usage
 
 The mode of using the program is via CLI. Some flavour or Linux environment is recommended as it it tested on similar environment.
 But Windows should work fine as well. To run the program, you need to fulfil the prerequisites:
 
-- node > 10.x.x
-- npm > 6.x.x
+- `node > 10.x.x`
+- `npm > 6.x.x`
+
 Check your environment using `node -v && npm -v`.
 
 Then do the following, from project root:
