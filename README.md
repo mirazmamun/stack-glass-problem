@@ -40,6 +40,7 @@ Run the script:
 ```bash
 npm run test
 ```
+Check out the docs for  [ava][ava] for details of tests.
 
 ## Contributors
 
@@ -58,3 +59,4 @@ npm run test
 [npm]: https://www.npmjs.com/
 
 [yarn]: https://yarnpkg.com/
+[ava]: https://github.com/avajs/ava
