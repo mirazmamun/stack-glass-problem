@@ -8,7 +8,8 @@
 <!-- [![license](https://img.shields.io/github/license/mirazmamun/stack-glass-problem.svg)](LICENSE)
 [![npm downloads](https://img.shields.io/npm/dt/stack-glass-problem.svg)](https://npm.im/stack-glass-problem) -->
 
-> Solving amount of water dispensed in glasses stacked in triangular pattern following the image ![here](screenshot_stack.png). This will find out the amount of liquid in any glass depending on amount poured on topmost one.
+> Solving amount of water dispensed in glasses stacked in triangular pattern following the image ![here](screenshot_stack.png). 
+This will find out the amount of liquid in any glass depending on amount poured on topmost one.
 
 
 ## Table of Contents
@@ -24,13 +25,15 @@
 The mode of using the program is via CLI. Some flavour or Linux environment is recommended as it it tested on similar environment.
 But Windows should work fine as well. To run the program, you need to fulfil the prerequisites:
 
-- `node > 10.x.x`
-- `npm > 6.x.x`
+- `node > 10.x.x`. Checkout this [link][node]
+- `npm > 6.x.x`. THe previous command should already install `npm`. Checkout _NodeJS_ docs or forum for troubleshooting.
+- This project has made use of `yarn` rather than `npm`. So you can install `yarn` by using `npm i -g yarn`. But nevertheless `npm` will also work. Only drawback is that, `package-lock.json` is not included in the repository, so the **packages version** installed **may not** quite match with those installed on the developer workdirectory.
 
-Check your environment using `node -v && npm -v`.
+Check your environment using `node -v && npm -v`. This assumes that you have `node` and `npm` executable in you OS `PATH`.
 
-Then do the following, from project root:
+Then assuming that you have cloned the repository, do the following, **from project root**:
 
+- If you yarn installed then run `yarn install`. Otherwise if you have npm then run `npm install`.
 - `node ./bin/index.js` and follow the prompt
 
 ## Test
@@ -57,6 +60,6 @@ Check out the docs for  [ava][ava] for details of tests.
 ## 
 
 [npm]: https://www.npmjs.com/
-
+[node]: https://nodejs.org/en/download/
 [yarn]: https://yarnpkg.com/
 [ava]: https://github.com/avajs/ava
