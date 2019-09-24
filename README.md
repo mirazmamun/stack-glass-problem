@@ -8,20 +8,37 @@
 <!-- [![license](https://img.shields.io/github/license/mirazmamun/stack-glass-problem.svg)](LICENSE)
 [![npm downloads](https://img.shields.io/npm/dt/stack-glass-problem.svg)](https://npm.im/stack-glass-problem) -->
 
-> Solving amount of water dispensed in glasses stacked in triangular pattern
+> Solving amount of water dispensed in glasses stacked in triangular pattern following the image [!here]
 
 
 ## Table of Contents
 
-* [Usage](#usage)
+* [Usage](#Dev Setup and Usage)
+* [Test](#Test)
 * [Contributors](#contributors)
 * [License](#license)
 
 
-## Usage
+## Dev Setup and Usage
 
-TBD...
+The mode of using the program is via CLI. Some flavour or Linux environment is recommended as it it tested on similar environment.
+But Windows should work fine as well. To run the program, you need to fulfil the prerequisites:
 
+- node > 10.x.x
+- npm > 6.x.x
+Check your environment using `node -v && npm -v`.
+
+Then do the following, from project root:
+
+- `node ./bin/index.js` and follow the prompt
+
+## Test
+
+Run the script:
+
+```bash
+npm run test
+```
 
 ## Contributors
 

@@ -6,9 +6,7 @@
   "ava": {
     "failFast": true,
     "verbose": true,
-    "helpers": [
-      "test/helpers/**/*"
-    ]
+    "files" : [ "./test/**/*" ]
   },
   "bugs": {
     "url": "https://github.com/mirazmamun/stack-glass-problem/issues",
@@ -71,7 +69,7 @@
       "git add"
     ]
   },
-  "main": "index.js",
+  "main": "./src/stack.js",
   "bin": {
     "stackglass": "./bin/index.js"
   },
@@ -101,6 +99,7 @@
     "url": "https://github.com/mirazmamun/stack-glass-problem"
   },
   "scripts": {
+    "start" : "node ./bin/index.js",
     "ava": "cross-env NODE_ENV=test ava",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "xo && remark . -qfo",
