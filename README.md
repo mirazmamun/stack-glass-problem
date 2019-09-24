@@ -26,9 +26,9 @@ This will find out the amount of liquid in any glass depending on amount poured 
 The mode of using the program is via CLI. Some flavour or Linux environment is recommended as it it tested on similar environment.
 But Windows should work fine as well. To run the program, you need to fulfil the prerequisites:
 
-- `node > 10.x.x`. Checkout this [link][node]
-- `npm > 6.x.x`. THe previous command should already install `npm`. Checkout _NodeJS_ docs or forum for troubleshooting.
-- This project has made use of `yarn` rather than `npm`. So you can install `yarn` by using `npm i -g yarn`. But nevertheless `npm` will also work. Only drawback is that, `package-lock.json` is not included in the repository, so the **packages version** installed **may not** quite match with those installed on the developer workdirectory.
+- `node >= 10.x.x`. Checkout this [link][node]
+- `npm >= 6.x.x`. THe previous command should already install `npm`. Checkout _NodeJS_ docs or forum for troubleshooting.
+- `yarn >= 1.15.x` This project has made use of [`yarn`][yarn] rather than `npm`. So you can install `yarn` by using `npm i -g yarn`. But nevertheless `npm` will also work. Only drawback is that, `package-lock.json` is not included in the repository, so the **packages version** installed **may not** quite match with those installed on the developer workdirectory.
 
 Check your environment using `node -v && npm -v`. This assumes that you have `node` and `npm` executable in you OS `PATH`.
 
@@ -65,6 +65,7 @@ Check out the docs for  [ava][ava] for details of tests.
 ## Roadmap
 
 - Add more code coverage.
+- Add custom Error class using helpful error codes to help debugging.
 - Publish the tool as REST API using `restify` for integrating with any UI that can talk REST.
 - Develop an web app to visualize the scenario and interactive form using React or VueJS.
 
@@ -73,6 +74,12 @@ Check out the docs for  [ava][ava] for details of tests.
 | Name               | Website                              |
 | ------------------ | ------------------------------------ |
 | **Miraz Al-Mamun** | <https://codarrior.mirazalmamun.xyz> |
+
+If you would like to contribute, here are some guidelines:
+
+- Follow clean coding and put docblock using JSDoc format.
+- This project uses `prettier and xo` for linting.
+- Make sure put right commit message. This gets help from `husky`.
 
 
 ## License
