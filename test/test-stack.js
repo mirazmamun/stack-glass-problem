@@ -10,9 +10,17 @@ test.skip('returns Stack', t => {
   t.true(stack instanceof Stack);
 });
 
-test('returns Stack print', t => {
+test.skip('returns Stack print', t => {
   let stack = new Stack(4);
   stack.init();
   stack.print();
+  t.true(stack instanceof Stack);
+});
+
+test('returns Stack calculate', t => {
+  let stack = new Stack(4, 250, 0.5);
+  stack.init();
+  stack.calculate();
+  purdy(stack.stackNest, {depth: 6});
   t.true(stack instanceof Stack);
 });

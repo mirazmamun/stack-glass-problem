@@ -48,7 +48,6 @@
   "homepage": "https://github.com/mirazmamun/stack-glass-problem",
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
