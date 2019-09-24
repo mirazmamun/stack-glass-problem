@@ -8,7 +8,7 @@
 <!-- [![license](https://img.shields.io/github/license/mirazmamun/stack-glass-problem.svg)](LICENSE)
 [![npm downloads](https://img.shields.io/npm/dt/stack-glass-problem.svg)](https://npm.im/stack-glass-problem) -->
 
-> Solving amount of water dispensed in glasses stacked in triangular pattern following the image ![here](screenshot_stack.png). 
+> Solving amount of water dispensed in glasses stacked in triangular pattern following the image ![here](screenshot_stack.png) 
 This will find out the amount of liquid in any glass depending on amount poured on topmost one.
 
 
@@ -16,6 +16,7 @@ This will find out the amount of liquid in any glass depending on amount poured 
 
 * [Usage](#usage)
 * [Test](#Test)
+* [Roadmap](#roadmap)
 * [Contributors](#contributors)
 * [License](#license)
 
@@ -36,6 +37,16 @@ Then assuming that you have cloned the repository, do the following, **from proj
 - If you yarn installed then run `yarn install`. Otherwise if you have npm then run `npm install`.
 - `node ./bin/index.js` and follow the prompt
 
+## Folder Structure
+
+```
+- bin  (D) (the CLI executable script)
+- src  (D) (all source codes)
+- test (D) (test specs)
+- package.json (F) (nodejs package manifest)
+... (F) (all other supporting files)
+```
+
 ## Test
 
 Run the script:
@@ -43,7 +54,19 @@ Run the script:
 ```bash
 npm run test
 ```
+or to run specific test do:
+
+```bash
+./node_modules/.bin/ava <test file location>
+```
+
 Check out the docs for  [ava][ava] for details of tests.
+
+## Roadmap
+
+- Add more code coverage.
+- Publish the tool as REST API using `restify` for integrating with any UI that can talk REST.
+- Develop an web app to visualize the scenario and interactive form using React or VueJS.
 
 ## Contributors
 
