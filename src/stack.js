@@ -49,6 +49,16 @@ class Stack {
   }
 
   /**
+   * Get the spacing between printing items
+   * 
+   * @access private
+   * @returns {number}
+   */
+  _getPrintItemSpacing () {
+    return this.dispenserCapacity.toString().length + this.floatPrecision;
+  }
+
+  /**
    * Pretty print
    * 
    * @param {boolean} fill Whether to fill the pyramid graph with fill values of the nodes or just
@@ -57,7 +67,7 @@ class Stack {
    * @returns {Stack}   current Stack instance
    */
   print(fill = false) {
-    const singleSpacing = ' ';
+    const singleSpacing = ' '.repeat(this._getPrintItemSpacing());
     const firstSpacing = Math.floor(this.colCount / 2) * 2 + 1;
     for (let i = 0; i < this.stackNest.length; i++) {
       // first line will be shifted to center
@@ -70,7 +80,7 @@ class Stack {
 
       for (let j = 0; j < this.stackNest[i].length; j++) {
         if (typeof this.stackNest[i][j] !== undefined) {
-          linePrint += `${singleSpacing}${fill ? String(this.stackNest[i][j].fill): `+`}${singleSpacing}`;
+          linePrint += `${singleSpacing}${fill ? String(this.stackNest[i][j].fill).padEnd(this._getPrintItemSpacing()) : `+`}${singleSpacing}`;
         }
       }
       console.log(linePrint);
@@ -84,19 +94,15 @@ class Stack {
    * @returns {Stack}
    */
   calculate() {
-    // TODO; calculate if the node will fill
-    let stopIteration = false;
     //start with source fill
     this.stackNest[0][0].source = this.totalDump;
     for (let i = 0; i < this.stackNest.length; i++) {
-      if (stopIteration) break;
       for (let j = 0; j < this.stackNest[i].length; j++) {
         if (typeof this.stackNest[i][j] !== undefined) {
           let curDispenser = this.stackNest[i][j];
           //we have less liquid left than capacity
           if (curDispenser.source <= this.dispenserCapacity) {
             curDispenser.fill = curDispenser.source;
-            stopIteration = true;
             //we have more to fill and overflow
           } else {
             this.stackNest[i][j].fill = this.dispenserCapacity;
@@ -121,7 +127,7 @@ class Stack {
    * 
    * @returns {any}   Either of Dispenser or Number depending on returnFill 
    */
-  getItem (row = 0, column = 0, returnFill = false) {
+  getItem(row = 0, column = 0, returnFill = false) {
     //validate the arguments
     row = Number(row);
     column = Number(column);

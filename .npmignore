@@ -1,0 +1,7 @@
+# the test files
+test
+# the tooling and pipeline files
+/.*
+/*.png
+!package.json
+!LICENSE

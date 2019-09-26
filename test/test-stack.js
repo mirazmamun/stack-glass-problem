@@ -11,17 +11,17 @@ test.beforeEach(t => {
   };
 })
 
-test.skip('returns Stack', t => {
+test('returns Stack', t => {
   purdy(t.context.stack.stackNest, {depth: 6});
   t.true(t.context.stack instanceof Stack);
 });
 
-test.skip('returns Stack print', t => {
+test('returns Stack print', t => {
   t.context.stack.print();
   t.pass(`Printed the stack`);
 });
 
-test.skip('returns Stack calculate', t => {
+test('returns Stack calculate', t => {
   t.context.stack.nodeCapacity = 250;
   t.context.stack.totalDump = 800;
   t.context.stack.calculate();
@@ -31,11 +31,14 @@ test.skip('returns Stack calculate', t => {
 });
 
 test('returns Stack item', t => {
+  t.context.stack.dim = 8;
+  t.context.stack.init();
   t.context.stack.nodeCapacity = 250;
-  t.context.stack.totalDump = 800;
+  t.context.stack.totalDump = 20000;
   let item = t.context.stack.calculate().getItem(1,1);
-  purdy(t.context.stack.stackNest, {depth: 6});
-  console.log(typeof item);
+  // purdy(t.context.stack.stackNest, {depth: 6});
+  // console.log(typeof item);
+  t.context.stack.print(true);
   t.true(item instanceof Dispenser);
   t.true(item.fill == 250);
 });

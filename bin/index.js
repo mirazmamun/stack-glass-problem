@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 const { prompt } = require('enquirer');
 const Stack = require('./../src/stack');
 
@@ -81,6 +82,6 @@ prompt(questions)
     }
   })
   .catch(err => {
-    console.error(`ERROR: in execution ${err.message}`);
+    console.error(`ERROR: in execution. Details are: ${err.message || `unknown error`}`);
     process.exit(1);
   });
