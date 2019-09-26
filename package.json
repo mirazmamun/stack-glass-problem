@@ -1,12 +1,14 @@
 {
   "name": "stack-glass-problem",
   "description": "Solving amount of water dispensed in glasses stacked in triangular pattern",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Miraz Al-Mamun <mirazmamun@yahoo.com> (https://codarrior.mirazalmamun.xyz)",
   "ava": {
     "failFast": true,
     "verbose": true,
-    "files" : [ "./test/**/*" ]
+    "files": [
+      "./test/**/*"
+    ]
   },
   "bugs": {
     "url": "https://github.com/mirazmamun/stack-glass-problem/issues",
@@ -99,7 +101,7 @@
     "url": "https://github.com/mirazmamun/stack-glass-problem"
   },
   "scripts": {
-    "start" : "node ./bin/index.js",
+    "start": "node ./bin/index.js",
     "ava": "cross-env NODE_ENV=test ava",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "xo && remark . -qfo",
