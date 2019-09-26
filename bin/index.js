@@ -73,15 +73,18 @@ prompt(questions)
     try {
       let stack = new Stack(res.dimension, res.capacity, res.totalpour);
       stack.init().calculate();
-      console.log(`The amount of liquid at ${res.row}, ${res.column} is ${stack.getItem(res.row, res.column, true)}`);
-      console.log(`Here is the indicative disribution graph`);
+      console.log(`The amount of liquid at ${res.row}, ${res.column} is: \u001b[32m${stack.getItem(res.row, res.column, true)} ml\u001b[0m`);
+      console.log(`Here is the indicative disribution (in ml) graph`);
+      //print it in green
+      console.log(`\u001b[32m`)
       stack.print(true);
+      console.log(`\u001b[0m`);
     } catch (err) {
-      console.error(`ERROR: error while running Stack construction. The details are: ${err.message}`);
+      console.error(`ERROR: error while running Stack construction. The details are: \u001b[36m${err.message}\u001b[0m`);
       process.exit(1);
     }
   })
   .catch(err => {
-    console.error(`ERROR: in execution. Details are: ${err.message || `unknown error`}`);
+    console.error(`ERROR: in execution. Details are: \u001b[36m${err.message || `unknown error`}\u001b[0m`);
     process.exit(1);
   });

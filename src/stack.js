@@ -73,17 +73,24 @@ class Stack {
       // first line will be shifted to center
       let curLineFirstSpacing = firstSpacing - 2 * i;
       let linePrint = '';
+      let offset = '';
+      let capacityPrint = '';
       while (curLineFirstSpacing >= 0) {
-        linePrint += `${singleSpacing}`;
+        offset += `${singleSpacing}`;
         --curLineFirstSpacing;
       }
-
+      //add the offset to the current line
+      linePrint += `${offset}`;
       for (let j = 0; j < this.stackNest[i].length; j++) {
         if (typeof this.stackNest[i][j] !== undefined) {
-          linePrint += `${singleSpacing}${fill ? String(this.stackNest[i][j].fill).padEnd(this._getPrintItemSpacing()) : `+`}${singleSpacing}`;
+          capacityPrint += `${singleSpacing}${fill ? String(this.stackNest[i][j].fill).padEnd(this._getPrintItemSpacing()) : `+`}${singleSpacing}`;
         }
       }
+      //the final string
+      linePrint = offset + capacityPrint;
       console.log(linePrint);
+      //print the lower bar
+      console.log(`${offset}${'-'.repeat(capacityPrint.length)}`)
     }
     return this;
   }
