@@ -1,7 +1,7 @@
 {
   "name": "stack-glass-problem",
   "description": "Solving amount of water dispensed in glasses stacked in triangular pattern",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Miraz Al-Mamun <mirazmamun@yahoo.com> (https://codarrior.mirazalmamun.xyz)",
   "ava": {
     "failFast": true,
